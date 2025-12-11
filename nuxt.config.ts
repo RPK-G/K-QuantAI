@@ -11,8 +11,17 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/K-QuantAI/',
     buildAssetsDir: '/_nuxt/',
+    head: {
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
+        { name: 'theme-color', content: '#020617' }, // slate-950
+        { name: 'apple-mobile-web-app-capable', content: 'yes' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+      ],
+    }
   },
   nitro: {
     preset: 'static'
   }
 })
+

@@ -28,7 +28,7 @@ const stats = [
 </script>
 
 <template>
-  <div class="min-h-screen bg-slate-950 font-sans text-slate-200 relative overflow-hidden">
+  <div class="min-h-screen bg-slate-950 font-sans text-slate-200 relative overflow-hidden mobile-safe-area">
     
     <!-- Background Gradients -->
     <div class="absolute top-0 left-0 w-full h-[500px] bg-primary-900/20 blur-[120px] pointer-events-none" />
@@ -147,6 +147,14 @@ const stats = [
 </template>
 
 <style scoped>
+/* Mobile Safe Area Support */
+.mobile-safe-area {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
 /* Grid Background - matching login page style */
 .cyber-grid-bg {
   background-image: 

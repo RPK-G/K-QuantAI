@@ -12,7 +12,7 @@ const gridStyle = {
 </script>
 
 <template>
-  <div class="min-h-screen bg-slate-950 flex items-center justify-center p-4 relative overflow-hidden font-sans text-slate-200">
+  <div class="min-h-screen bg-slate-950 flex items-center justify-center p-4 relative overflow-hidden font-sans text-slate-200 mobile-safe-area">
     <!-- Background Effects -->
     <div class="absolute inset-0 opacity-20 pointer-events-none" :style="gridStyle"></div>
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary-500/20 blur-[120px] rounded-full pointer-events-none"></div>
@@ -67,5 +67,11 @@ const gridStyle = {
 </template>
 
 <style scoped>
-/* Optional: Add custom animations or overrides if needed */
+/* Mobile Safe Area Support */
+.mobile-safe-area {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
 </style>
