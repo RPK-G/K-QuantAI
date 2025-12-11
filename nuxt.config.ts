@@ -5,4 +5,14 @@ export default defineNuxtConfig({
   modules: ['@nuxt/ui'],
   css: ['~/assets/css/main.css'],
   //pages: false, // 禁用基于文件的路由系统
+  
+  // GitHub Pages 部署配置
+  ssr: false,
+  app: {
+    baseURL: '/K-QuantAI/',
+    buildAssetsDir: '/_nuxt/',
+  },
+  nitro: {
+    preset: 'static'
+  }
 })
