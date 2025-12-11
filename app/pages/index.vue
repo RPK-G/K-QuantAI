@@ -34,6 +34,9 @@ const stats = [
     <div class="absolute top-0 left-0 w-full h-[500px] bg-primary-900/20 blur-[120px] pointer-events-none" />
     <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo-900/20 blur-[120px] pointer-events-none" />
     <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay pointer-events-none"></div>
+    
+    <!-- Grid Background (like login page) -->
+    <div class="absolute inset-0 opacity-20 pointer-events-none cyber-grid-bg"></div>
 
     <!-- Hero Section -->
     <div class="relative z-10 container mx-auto px-4 py-24 flex flex-col items-center text-center">
@@ -144,4 +147,13 @@ const stats = [
 </template>
 
 <style scoped>
+/* Grid Background - matching login page style */
+.cyber-grid-bg {
+  background-image: 
+    linear-gradient(to right, #334155 1px, transparent 1px),
+    linear-gradient(to bottom, #334155 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+}
 </style>
